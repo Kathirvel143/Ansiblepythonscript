@@ -11,7 +11,7 @@ sudo apt install ansible
 ### 2.Create SSH keys to connect to the EC2 instance 
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/my_aws
 
-### 3.Create Ansible Directory
+### 3.Create Ansible Directory(Optional)
 mkdir -p AWS_Ansible/group_vars/all/
 cd AWS_Ansible
 touch playbook.yml
@@ -27,9 +27,9 @@ Provide access Credentials
  
 ### 7.Executing Ansible to Create instances
 ansible-playbook playbook.yml
-# Create the instance
+#### Create the instance
 ansible-playbook playbook.yml --tags create_ec2
-# Get the public DNS
+#### Get the public DNS
 ansible-playbook playbook.yml
 ### 8.Run python code
 python3 list_instances.py
