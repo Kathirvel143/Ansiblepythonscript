@@ -1,6 +1,5 @@
 
-import boto3  
-import boto3    
+import boto3
 ec2client = boto3.client('ec2',aws_access_key_id = 'AKIAIU55CBEVR7RATUJQ',aws_secret_access_key = '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',region_name='ap-south-1')
 response = ec2client.describe_instances()
 for reservation in response["Reservations"]:
